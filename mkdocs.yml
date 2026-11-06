@@ -17,16 +17,16 @@ theme:
         # Thème clair.
         - media: "(prefer-color-scheme: light)"
           scheme: default
-          primary: orange
-          accent: orange
+          primary: green
+          accent: green
           toggle:
             icon: material/brightness-7
             name: Switch to dark theme
 
         - media: "(prefer-color-scheme: dark)"
           scheme: slate
-          primary: orange
-          accent: orange
+          primary: green
+          accent: green
           toggle:
             icon: material/brightness-4
             name: Switch to light theme
