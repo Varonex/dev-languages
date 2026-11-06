@@ -1,4 +1,4 @@
-## Cyber Security Vulnerabilities
+## DevLanguages
 
 This repository lists all the development languages I came across (and took the time to document).
 
