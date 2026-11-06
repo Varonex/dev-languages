@@ -1,0 +1,109 @@
+﻿# Configuration de mkdocs pour la génération de pages.
+site_name: DevLanguages
+site_url: https://Varonex.github.io/dev-languages/
+site_description: Non-exhaustive list of development languages I have ever used.
+site_author: Varonex
+
+repo_name: Varonex/dev-languages
+repo_url: https://github.com/Varonex/dev-languages
+
+theme:
+    name: material
+    language: en
+    copyright: "DevLanguages &copy; 2026 by Varonex is licensed under CC BY-NC-SA 4.0. To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/"
+
+  # Couleurs.
+    palette:
+        # Thème clair.
+        - media: "(prefer-color-scheme: light)"
+          scheme: default
+          primary: red
+          accent: red
+          toggle:
+            icon: material/brightness-7
+            name: Switch to dark theme
+
+        - media: "(prefer-color-scheme: dark)"
+          scheme: slate
+          primary: red
+          accent: red
+          toggle:
+            icon: material/brightness-4
+            name: Switch to light theme
+
+  # Contenu du site.
+    features:
+        # Navigation avancée.
+        - navigation.indexes
+        - navigation.top
+        - navigation.tracking
+        - navigation.footer
+
+        # Amélioration sommaire.
+        - toc.integrate
+        - toc.follow
+
+        # Blocs de code.
+        - content.code.copy
+        - content.code.select
+        - content.code.annotate
+
+        # Barre de recherche.
+        - search.suggest
+        - search.highlight
+        - search.share
+
+# Markdown additionnel.
+markdown_extensions:
+    # Inclusions.
+    - pymdownx.snippets:
+        base_path:
+            - docs
+
+    # Interprétations et parsing.
+    - admonition
+    - pymdownx.details
+    - pymdownx.magiclink
+
+    - pymdownx.highlight:
+        anchor_linenums: true
+        line_spans: __span
+        pygments_lang_class: true
+
+    - pymdownx.inlinehilite
+
+    - pymdownx.superfences:
+        custom_fences:
+            - name: mermaid
+              class: mermaid
+              format: !!python/name:pymdownx.superfences.fence_code_format
+
+    - pymdownx.tabbed:
+        alternate_style: true
+
+    - pymdownx.emoji:
+        emoji_index: !!python/name:material.extensions.emoji.twemoji
+        emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+    # Params modules features.
+    - toc:
+        permalink: true
+        toc_depth: 3
+
+
+# Liaison CSS.
+extra_css:
+    - css/style.css
+
+# Liaison JS.
+extra_javascript:
+    - js/app.js
+
+# Enlève les marques du générateur.
+extra:
+    generator: false
+
+# Navigation aisée.
+nav:
+    - DevLanguages:
+        - index.md
