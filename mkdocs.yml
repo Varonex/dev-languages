@@ -117,5 +117,6 @@ extra:
 
 # Navigation aisée.
 nav:
-    - DevLanguages:
-        - index.md
+    - "Dev Languages": index.md
+    - Languages:
+        - GDScript: notes/gdscript/language.md
